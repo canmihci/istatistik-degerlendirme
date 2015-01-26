@@ -25,4 +25,4 @@ tek işaretlenir. Değerlendirme bu şekilde eklenmiş tüm makaleler için yür
 - "Grafikler" kısımlarında, değerlendirilmesi tamamlanmış yayınlar için
 değerlendirmeyi betimleyici grafikler sunulur.
 
-    - Can
+    * Can
