@@ -1,0 +1,41 @@
+<template name = "kriter">
+  <div class="post">
+      
+    
+        <div class="post-content">
+            <div class = "row">
+                <div class="col-md-10">
+                    <small>{{type}}</small>
+                    <h2 style = "margin-top : 0px">{{title}}</h2>
+                </div>
+                <div class="col-md-2">
+                    <button class = "btn btn-danger trash pull-right"><span class = "glyphicon glyphicon-trash"></span>Sil</button>
+                </div>
+            </div>
+        <ol>
+        {{#each this.rules}}
+        <div class = "row kriter">
+        <div class="col-md-10"><li>{{this.content}}</li></div>
+        <div class="col-md-2"><span class = "glyphicon glyphicon-trash kriter-sil"></span></div>    
+        </div>
+        {{/each}}
+        
+        </ol>
+        
+        
+        <div class="row" style = "margin-top : 0px">
+            <div class="col-lg-12">
+                <div class="input-group">
+                  <input type="text" class="form-control madde" placeholder = "Checklist maddesi">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" id="maddeEkle">Ekle</button>
+                  </span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+  
+</template>

@@ -1,0 +1,21 @@
+<template name ="makale">
+  <div class="post">
+      <div class = "row">
+        <div class = "col-md-9">
+          <small>{{yazari}}</small>
+          <a href = {{url}} target="_blank"><h4 style = "margin-top : 0px">{{basligi}}</h4></a><br>
+        </div>
+        <div class = col-md-3>
+            <div class = "row">
+            <button class = "btn btn-danger trash"><span class = "glyphicon glyphicon-trash"></span>Sil</button>
+            </div>
+        </div>
+        </div>
+      <!--{{#if this.kriterler}}
+      <h4>Kriterler:</h4> 
+      {{/if}}
+      {{#each this.kriterler}}
+        {{> Makalekriteri}}
+      {{/each}}-->
+    </div>
+</template>

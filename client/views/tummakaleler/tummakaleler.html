@@ -1,0 +1,16 @@
+
+<template name="Tummakaleler">
+  <h1>Tüm Makaleler (Makale Sayısı: {{count}})</h1>
+  <div class = "jumbotron">
+  <div class="row" style = "margin-top : 30px">
+    <div class ="col-lg-12">
+      <div class="posts">
+      {{#each tummakaleler}}
+          {{> tummakale}}
+      {{/each}}
+      </div>      
+    </div>
+  </div><!-- /.row -->
+  </div>
+</template>
+

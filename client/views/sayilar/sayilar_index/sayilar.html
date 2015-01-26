@@ -1,0 +1,25 @@
+
+<template name="sayilar">
+  <h1><a href = "/">Dergiler</a> > {{baslik}} (Makale Sayısı: {{count}})</h1>
+  <div class = "jumbotron">
+  <div class="row" style = "margin-top : 30px">
+    <div class="col-lg-3">
+      <div class="input-group">
+        <input type="text" id="year" placeholder = "Yılı" class="form-control">
+        <input type="text" id="volume" placeholder = "Cilt" class="form-control">
+        <input type="text" id="issue" placeholder = "Sayı" class="form-control">
+        <button id="sayiEkle" class="btn btn-primary pull-right" type="button">Sayı Ekle</button>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+    <div class = "col-lg-9">  
+      <div class="posts">
+      {{#each sayilar}}
+          {{> sayi}}
+      {{/each}}
+      </div>
+    </div> 
+</div><!-- /.row -->
+</div>
+ 
+</template>
+

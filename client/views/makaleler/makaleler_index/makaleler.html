@@ -1,0 +1,24 @@
+
+<template name="makaleler">
+  <h1><a href = "/">Dergiler</a> > <a href = "/dergiler/{{dergi._id}}">{{dergi.ismi}}</a> > {{sayi.yili}} Yılı, Cilt no: {{sayi.cilt}} Sayı No: {{sayi.sayi}} ({{count}})</h1>
+  <div class = "jumbotron">
+  <div class="row" style = "margin-top : 30px">
+    <div class="col-lg-3">
+      <div class="input-group">
+        <input type="text" id="title" placeholder = "Başlığı" class="form-control">
+        <input type="text" id="author" placeholder = "Yazar(lar)ı" class="form-control">
+        <input type="text" id="url" placeholder = "URL" class="form-control">
+        <button id="makaleEkle" class="btn btn-primary pull-right" type="button">Makale Ekle</button>
+    </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+    <div class ="col-lg-9">
+      <div class="posts">
+      {{#each makaleler}}
+          {{> makale}}
+      {{/each}}
+      </div>      
+    </div>
+  </div><!-- /.row -->
+  </div>
+</template>
+

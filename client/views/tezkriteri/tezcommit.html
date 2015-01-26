@@ -1,0 +1,18 @@
+
+<template name="Tezcommit">
+        <div class = "row">
+            <div class = "row"><div class = "col-xs-10"><small><li>{{content}}</li></small></div>
+            <div class = "col-xs-2">
+                {{#if unchecked}}<span class = "glyphicon glyphicon-remove remove" style = "margin-right: 10px;"></span><span class = "glyphicon glyphicon-ok ok"></span>
+                {{else}}
+                    {{#if checkedandtrue}}<span class = "glyphicon glyphicon-ok green"></span>
+                    {{else}}
+                        {{#if checkedandfalse}}<span class = "glyphicon glyphicon-remove red" style = "margin-right: 10px;"></span>
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+            </div>
+            </div>
+        </div>
+</template>
+

@@ -1,0 +1,35 @@
+
+<template name="GrafiklerIndex">
+  <h1>Grafikler (Makale)</h1>
+  <div class = "jumbotron">
+  <div class="row" style = "margin-top : 30px">
+    <div class="col-lg-3 post">
+              <ul class="list-unstyled" role="menu">
+                <li><h4>Genel Kriterler</h4></li>
+                {{#each genel}}
+                <li><a href = "{{pathFor 'Grafikler'}}" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <li><h4>Parametrik Testler</h4></li>
+                {{#each parametrik}}
+                <li><a href = "{{pathFor 'Grafikler'}}" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <li><h4>Non-Parametrik Testler</h4></li>
+                {{#each nonparametrik}}
+                <li><a href = "{{pathFor 'Grafikler'}}" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <li><h4>Post-hoc Testleri</h4></li>
+                {{#each posthoc}}
+                <li><a href = "{{pathFor 'Grafikler'}}" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <li><h4>Diğer</h4></li>
+                {{#each diger}}
+                <li><a href = "{{pathFor 'Grafikler'}}" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+              </ul>
+    </div><!-- /.col-lg-3 -->
+
+    
+    </div><!-- /.row -->
+  </div>
+</template>
+

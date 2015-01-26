@@ -1,0 +1,58 @@
+
+<template name="Kriterler">
+  <h1>Kriterler</h1>
+  <div class = "jumbotron">
+  <div class="row" style = "margin-top : 30px">
+    <div class="col-lg-3">
+        <div class="input-group">
+          <input type="text" class="form-control" id = "kriterAdi" placeholder = "Kriter Adı">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" id="kriterEkle">Ekle</button>
+          </span>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="Genel Kriter" checked>
+            <span class = "white-text">Genel Kriter</span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="Parametrik Test">
+            <span class = "white-text">İstatistik Testi, Parametrik</span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="Non-Parametrik Test">
+            <span class = "white-text">İstatistik Testi, Non-Parametrik</span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios4" value="Post-Hoc Testi">
+            <span class = "white-text">Post-hoc Testi</span>
+          </label>
+        </div>
+                <div class="radio">
+          <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios5" value="Diğer">
+            <span class = "white-text">Diğer</span>
+          </label>
+        </div>
+
+    </div><!-- /.col-lg-3 -->
+    
+    
+    <div class ="col-lg-9">
+      <div class="posts">
+        {{#each kriterler}}
+        {{> kriter}}
+        {{/each}}
+
+      </div>      
+    </div>
+  </div><!-- /.row -->
+  </div>
+</template>
+

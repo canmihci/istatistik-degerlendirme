@@ -1,0 +1,52 @@
+<template name = "tummakale">
+  <div class="post">
+      <div class = "row">
+        <div class = "col-xs-9">
+          <small>{{dergi}} - {{sayi}}</small><br>
+          <small><strong>{{yazari}}</strong></small>
+          <a href = {{url}} target="_blank"><h4 style = "margin-top : 0px">{{basligi}}</h4></a><br>
+        </div>
+        <div class = col-xs-3>
+            <div class = "row">
+            <button type="button" class="btn btn-primary dropdown-toggle add-stat" data-toggle="dropdown" style = "margin-bottom : 20px">Kriter ekle <span class="caret"></span></button>
+            <div class="dropdown-menu" style = "min-width: 400px">
+              <ul class="list-unstyled col-lg-6 col-sm-6" role="menu">
+                <li><h4>Genel Kriterler</h4></li>
+                {{#each genel}}
+                <li><a href = "#" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <hr>
+                <li><h4>Parametrik Testler</h4></li>
+                {{#each parametrik}}
+                <li><a href = "#" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+              </ul>
+              <ul class="list-unstyled col-lg-6 col-sm-6" role="menu">
+                <li><h4>Non-Parametrik Testler</h4></li>
+                {{#each nonparametrik}}
+                <li><a href = "#" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <hr>
+                <li><h4>Post-hoc Testleri</h4></li>
+                {{#each posthoc}}
+                <li><a href = "#" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+                <hr>
+                <li><h4>Diğer</h4></li>
+                {{#each diger}}
+                <li><a href = "#" class = "ekle">{{this.title}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+            <button class = "btn btn-danger trash"><span class = "glyphicon glyphicon-trash"></span>Sil</button>
+            </div>
+        </div>
+        </div>
+    {{#if this.kriterMap}}
+      <h4>Kriterler:</h4> 
+    {{/if}}
+        {{#each this.kriterMap}}
+        {{> Makalekriteri}}
+      {{/each}}
+    </div>    
+</template>

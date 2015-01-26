@@ -1,0 +1,26 @@
+
+<template name="Tezkriteri">
+  <div class = 'tezkriteri'>
+    <div class = "row-fluid"><hr>
+      <div class = "col-md-11"><small><strong>{{title}}</strong></small></div>
+      <div class = "col-md-1"><span class = "glyphicon glyphicon-trash remove-tez-kriteri"></span></div>
+    </div>
+    <div class = row>
+      <div class = col-md-7>
+        <ol>
+        {{#each rules}}
+        {{> Tezcommit}}
+        {{/each}}
+        </ol>
+      </div>
+      <div class = col-md-5>
+        <small>Notlar:</small>
+        <textarea class="form-control note" rows="3" style = "font-size: 11px" placeholder = "Kriter ile ilgili notlar" disabled = "disabled"></textarea>
+        <button type = "button" class = "btn btn-default kaydet btn-xs pull-right" style = "margin-top : 5px">Kaydet</button>
+        <button type = "button" class = "btn btn-default duzenle btn-xs pull-right" style = "margin-top : 5px">Düzenle</button>
+        
+      </div>
+    </div>
+  </div>
+</template>
+
