@@ -20,4 +20,6 @@ işaretlenir. Değerlendirme bu şekilde eklenmiş tüm tezler için yürütül�
 tek işaretlenir. Değerlendirme bu şekilde eklenmiş tüm makaleler için yürütülür.
 
 - "Grafikler" kısımlarında, değerlendirilmesi tamamlanmış yayınlar için
-değerlendirmeyi betimleyici grafikler sunulur. 
+değerlendirmeyi betimleyici grafikler sunulur.
+
+    - Can
